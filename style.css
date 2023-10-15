@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    grid-template-rows: auto;
+    background-color: black;
+    gap: 10px;
+    justify-content: center;
+
+
+}
+
+/*.grid-container > div{
+    background-color: black;
+    border: 1px solid white;
+    
+}*/
+
+.item1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    /*padding: 0px;*/
+}
+
+.grid-container .item1 {
+    background-color: black;
+    ;
+}
+
+.grid-container .item1 {
+    display: inline-flex;
+    /*flex-direction: column;*/
+    float: left;
+    padding: 0.75em;
+
+}
+
+.grid-container .item1 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+
+}
+
+.grid-container .item1 ul li {
+    display: grid;
+
+    justify-content: center;
+    margin: 0 10em 0 10em;
+}
+
+.grid-container .item1 ul li a {
+    color: #fff;
+    font: 100%;
+}
+
+.grid-container .item1 ul li a:hover {
+    font-size: 120%;
+    /*background: red;
+    transition: background 1s linear;*/
+    transition: font-size 0.2s linear;
+
+}
+
+
+a {
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.grid-item {
+    text-align: center;
+    justify-items: center;
+
+}
+
+.item2 {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 2em;
+    align-items: center;
+    text-align: center;
+}
+
+.item2 img {
+    width: 6.5em;
+    margin-bottom: 10px;
+}
+
+.item2 input {
+    border-radius: 12px;
+    height: 2em;
+    width: 25em;
+}
+
+.item2 h2 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item2 h2 span {
+    color: rgb(225, 1, 214);
+}
+
+.item3 {
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    margin: 10px 0 0 0;
+    background-color: rgb(192, 14, 144);
+}
+
+.item3 ul {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.item3 ul li {
+    list-style: none;
+    position: relative;
+    padding: 10px 15px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+}
+
+.item3 ul li:hover {
+    background-color: deeppink;
+
+}
+
+.item3 ul li:last-child {
+    border-right: none;
+}
+
+.item3 ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.item3 ul li ul {
+    position: absolute;
+    background-color: #000;
+    top: 38px;
+    left: 0;
+    display: block;
+    width: 155px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.item3 ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.item3 ul li ul li {
+    border-right: none;
+    border-bottom: border-right 1px solid rgba(255, 255, 255, .2);
+}
+
+.grid-conteiner {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 28px;
+    background-color: #092236;
+    padding: 18px;
+
+}
+
+
+.grid-conteiner {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 28px;
+    background-color: #092236;
+    padding: 18px;
+
+}
+
+
+
+main {
+    background-color: #000;
+    grid-area: main;
+    padding: 20px;
+}
+
+input {
+    width: 37%;
+    border-radius: 4px;
+}
+
+.minerva-logo img {
+    width: 10vw;
+    margin: 60px 600px 0 0;
+
+}
+
+@media only screen and (max-width: 760px) {
+    .minerva-logo img {
+        width: 40vw;
+    }
+}
+
+.container-logo h2 {
+    color: #95bdd8;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-weight: 300;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.container-logo h2 span {
+    color: #0590ec;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    ;
+    font-weight: 700;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.grid-container-footer {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;   
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "f-title f-title f-title"
+    "f-logo f-input f-links"
+    "f-info f-input f-links"
+    "f-social f-image f-links"; 
+    
+    height: 480px;
+    width: 100%;
+    background-color: #000;
+    /*gap: 10px;*/
+    overflow: hidden;
+    /*margin-top: 20em;*/
+    
+
+}
+
+.f-item1{
+    grid-area: f-title;
+    /*border-top: 1px solid #fff;*/
+}
+
+.sub-a1 h1{
+    font-family: 'Cinzel Decorative', cursive;
+    letter-spacing: 5px;
+}
+
+.sub-a1 h1 span{
+    color: rgb(225, 1, 214);
+    font-weight: 400;
+    letter-spacing: 5px;
+    
+}
+
+.sub-a2 h2{
+    font-family: 'Cinzel Decorative', cursive;
+    letter-spacing: 5px;
+    
+}
+
+.sub-a2 h2 span{
+    color: rgb(225, 1, 214);
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Cinzel Decorative', cursive;
+    letter-spacing: 5px;
+}
+
+
+
+.subdivision{
+    display: grid;
+    /*border: #fff;*/
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+
+    width: 100%;
+    height: 100%;
+    /*border-top: 1PX solid white;*/
+}
+
+.subdivision2{
+    display: grid;
+    /*border: #fff;*/
+    grid-template-rows: 67% 33%;
+    grid-template-columns: 100%;
+
+    width: 100%;
+    height: 100%;
+    /*border-top: 1PX solid white;*/
+}
+    
+    .sub-b1{
+        /*border: 1px solid white;*/
+    }
+
+
+.f-item2{
+    grid-area:f-logo;
+    /*border: 1px solid #fff;*/
+}
+
+.f-item2 .logo-footer h2{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.f-item2 .logo-footer span{
+    color: rgb(225, 1, 214);
+}
+
+.f-item3{
+    grid-area: f-input;
+    /*border: 1px solid #fff;*/
+}
+
+.f-item3 #lname{
+    color: #0590ec;
+}
+
+.f-item3 .input-mail {
+    color:white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    width: 11%;
+    transition:width 0.4s ease-in-out; 
+  }
+
+  .f-item3 .input-mail:focus {
+    width: 100%;
+  }
+
+.f-item3 .submit-button{
+    background-color: rgb(225, 1, 214);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    height: 2.5em   ;
+}
+
+
+.f-item4{
+    grid-area: f-links;
+    /*border: 1px solid #fff;*/
+}
+
+.f-item4 ul{
+    list-style: none;
+}
+
+.f-item5{
+    grid-area: f-info;
+    /*border: 1px solid #fff;*/
+}    
+
+.f-item6{
+    grid-area: f-social;
+    /*border: 1px solid #fff;*/
+}    
+
+.f-item7{
+    grid-area: f-image;
+    /*border: 1px solid #fff;*/
+    overflow: hidden;
+}    
+
+
+.boton {
+    width: 150px;
+    border-radius: 8px;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+input[type=email] {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    max-width: 50vh;
+}
+
+
+
+.material-symbols-outlined {
+    /*Icono de prueba*/
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
+
+.navbar {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 2px 2px;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+}
+
+.icono-menu {
+    margin: 40px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.icono-menu img {
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.cont-menu {
+    background-color: rgb(42, 42, 42);
+    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-400px);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+
+.cont-menu.active {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+
+.cont-menu ul {
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+
+.cont-menu ul li {
+    color: white;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.cont-menu ul li:hover {
+    background-color: rgb(225, 1, 214);
+    color: rgb(255, 252, 252);
+}
+
+
+
+
+
+
+
+.icono-carrito{
+    margin: 40px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.icono-carrito img {
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.cont-carrito {
+    background-color: rgb(42, 42, 42);
+    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(400px);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+
+.cont-carrito.active {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+
+.cont-carrito ul {
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+
+.cont-carrito ul li {
+    color: white;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 50px;
+    
+}
+
+
+
+/* Este es el slider de línea 71*/
+
+.slider-frame {
+	width: 100%;
+    height: 500px;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+.flex-container-catalog{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    
+}
